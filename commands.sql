@@ -18,5 +18,5 @@ UPDATE web_sites SET password = AES_ENCRYPT('updatedpassword', @key_str, @init_v
 DELETE FROM web_sites WHERE site_url = 'https://www.spotify.com';
 
 -- Remove a password
-UPDATE web_sites SET password = NUll WHERE site_url = 'https://www.microsoft.com/';
+DELETE FROM web_sites WHERE password = AES_ENCRYPT('kI&3nO1$wQ5xZ', @key_str, @init_vector);
 
